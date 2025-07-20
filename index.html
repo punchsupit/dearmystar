@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dearmystar</title>
+     <style>
+    /* โค้ด CSS อื่นๆ ของคุณ */
+
+    @media (orientation: landscape) and (max-width: 768px) {
+      body {
+        font-size: 18px;
+      }
+
+      .main-container {
+        max-width: 90vw;
+      }
+
+      nav a {
+        margin: 0 15px;
+        display: inline-block;
+      }
+    }
+  </style>
+<body>
+      
+  <div id="orientation-warning" style="display:none; position:fixed; top:0; left:0; right:0; background:#ff4444; color:#fff; text-align:center; padding:10px; font-weight:bold; z-index:9999;">
+    โปรดหมุนหน้าจอเป็นแนวนอนเพื่อประสบการณ์ที่ดีที่สุด
+  </div>
+
+  <!-- ใส่โค้ด JavaScript ก่อนปิด body -->
+  <script>
+    function checkOrientation() {
+      const warning = document.getElementById('orientation-warning');
+      if (window.innerHeight > window.innerWidth) {
+        warning.style.display = 'block';
+        alert("โปรดหมุนหน้าจอเป็นแนวนอนเพื่อประสบการณ์ที่ดีที่สุด");
+      } else {
+        warning.style.display = 'none';
+      }
+    }
+
+    window.addEventListener('load', checkOrientation);
+    window.addEventListener('resize', checkOrientation);
+    window.addEventListener('orientationchange', checkOrientation);
+  </script>
+</script>
+
+</body>
+    <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      width: 90vw;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .box {
+      background-color: lightblue;
+      padding: 20px;
+      flex: 1 1 300px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    /* สำหรับมือถือ: แสดงแนวตั้ง */
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box {
+        width: 90vw;
+      }
+    }
+    </style>
+</head>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+  <title>Music Player with Controls</title>
+
+    <header>
+        <h1>Dear My Star</h1>
+        <p>Welcome to your website</p>
+    </header>
+   
+    <nav>
+        <a href="From me, to you.html">From me, to you</a>
+        <a href="All the Memories We Made.html">All the memories we made</a>
+        <a href="Our Story in Songs.html">Our Story in Songs</a>
+        <a href="A Space for Us.html">A Space for Us</a>
+    </nav>
+
+    <main>
+        <section class="main-container">
+            <h2 class="main-title">Just checking in...How are you?</h2>
+            <p class="main-info">
+                I know you’ve been sick and coughing a lot lately, and I just wanted to gently check in to see how you’re doing. I really care about you and hope you’re getting better.
+            </p>
+            <a href="Read more.html" class="main-btn">Read more</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Always with heart
+        </p>
+    </footer>
+</body>
+</html>

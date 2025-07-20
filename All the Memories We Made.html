@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All the Memories We Made</title>
+</head>
+<body>
+  <!-- Lightbox -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+  <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;"/>
+</div>
+
+    <h1>All the memories we made</h1>
+    <p style="text-align: center;">
+      <a href="index.html" style="color: black;">Go back to home page</a>
+    </p>
+    <p style="font-size: 18px; color: #444;"></p>
+
+  <body style="background-color: #ffd6d6;">
+  <!-- เนื้อหาทั้งหมดของคุณอยู่ในนี้ -->
+    <style>
+  h1 {
+    text-align: center;
+  }
+     
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: white;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: white;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+
+</style>
+</head>
+
+<div class="gallery">
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396479148301484142/IMG_1780.jpg?ex=687e3c0e&is=687cea8e&hm=f594910de32622a8f865db48edc6716ef649b804a67b73eaf5921aada4c6a399&" alt="Image 1"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396555117599260762/IMG_1855.png?ex=687e82ce&is=687d314e&hm=625c621656e14505f445f272951b5241c8cb18aae771fa2583908685f3c7df05&" alt="Image 2"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396479149245333607/IMG_2206.jpg?ex=687e3c0e&is=687cea8e&hm=a9768e8c78f49fcf54c93db96b9532ce5f631eb38975885b829fc808c5b3e6e8&" alt="Image 3"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396479149907906683/IMG_2522.jpg?ex=687e3c0e&is=687cea8e&hm=b230c3309631a3fa0d8b08e35d4fa1e2e256165cb48a6145f5d13947ea273b78&" alt="Image 4"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396479150876921910/IMG_2587.jpg?ex=687e3c0e&is=687cea8e&hm=3713cc6083ad15a44a136127a39cc64c73b5dde7528d5d6f315b293d1c892b84&" alt="Image 5"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396479151468318730/IMG_2675.jpg?ex=687e3c0f&is=687cea8f&hm=5464ecbaffbf851ba636b72fd6a7b92e9a7ae6c472dd0814a1939d61d74b9163&" alt="Image 6"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396479152084750376/IMG_2697.jpg?ex=687e3c0f&is=687cea8f&hm=c73f66408191b1c8e942f48b4ccfc66f3be6560fa973d80fe297502305dbcdf0&" alt="Image 7"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396479152659628063/IMG_2762.jpg?ex=687e3c0f&is=687cea8f&hm=bd0a9e7f811dccdd8346f12fb673ac4d850e333daf8a24cbacb12252e599cd42&" alt="Image 8"  onclick="openLightbox(this.src)" /></div>
+</div>
+<style>
+  .gallery {
+  display: flex;
+  flex-wrap: wrap; /* ให้รูปเลื่อนบรรทัดใหม่เมื่อเต็มแถว */
+  gap: 10px;
+}
+.gallery-item {
+  flex: 0 0 calc(25% - 10px); /* ให้แต่ละรูปกว้าง 25% ลบช่องว่าง */
+}
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+</style>
+<body>
+  <br>
+<div class="gallery">
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396479153028731032/029F2D24-E693-4690-85EE-86E48173B39D.jpg?ex=687e3c0f&is=687cea8f&hm=aa13136aab85dd737a5a3a6b15ed64b4100c1f607d54068c052f2efffdef14f2&" alt="Image 1"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480040040136834/IMG_2847.jpg?ex=687e3ce2&is=687ceb62&hm=a88b572d58f162e0aa474162984bb469b16549335ce1cd1d4efde7eb3cad0b5d&" alt="Image 2"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480040589463612/IMG_2869.jpg?ex=687e3ce3&is=687ceb63&hm=874d081d8b88a8bf1585642b26065606e42a38b561cbb3d5ada13d1da5370784&" alt="Image 3"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480040937586848/IMG_2927.jpg?ex=687e3ce3&is=687ceb63&hm=193ebadbad8302a1498c940f69e6912c75b5e99f97925c8816658d908161d10e&" alt="Image 4"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480041478787092/IMG_2972.jpg?ex=687e3ce3&is=687ceb63&hm=88f2f3e6cc098d6cce7508b21d6300ccf584087d2980fddf5340adf48d640178&" alt="Image 5"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480041910669332/IMG_2994.jpg?ex=687e3ce3&is=687ceb63&hm=a120a3a40f069278fda1cdeb679251e2a6e750059e160918022cb70dd5d6884a&" alt="Image 6"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480042216849428/D4AF1C91-049B-431F-ADA7-F3138D4DB690.jpg?ex=687e3ce3&is=687ceb63&hm=f020d95d4195f4597e977a12eb92e8b23476dccb1a97418f86abb1639f3ff0e0&" alt="Image 7"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480042707714199/IMG_3483.jpg?ex=687e3ce3&is=687ceb63&hm=b4f7cb6834e774ed69a71359db418e071d7cfa95f70ccdb80c76c03e8ccda13c&" alt="Image 8"  onclick="openLightbox(this.src)" /></div>
+</div>
+<style>
+  .gallery {
+  display: flex;
+  flex-wrap: wrap; /* ให้รูปเลื่อนบรรทัดใหม่เมื่อเต็มแถว */
+  gap: 10px;
+}
+.gallery-item {
+  flex: 0 0 calc(25% - 10px); /* ให้แต่ละรูปกว้าง 25% ลบช่องว่าง */
+}
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+</style>
+<body>
+  <br>
+<div class="gallery">
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480043361894460/IMG_3694.jpg?ex=687e3ce3&is=687ceb63&hm=3916ce9466721ab97e7fd90288ce8b2e54a64ad4ed90d0a80ea48d071ce8efd6&" alt="Image 1" onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396485320182333450/IMG_5978.jpg?ex=687e41cd&is=687cf04d&hm=ec78c388dae4e2da95945150722b109ba49de69612652568ec1e1b27f1fd3ede&" alt="Image 2"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480931920875611/DSC02923.jpg?ex=687e3db7&is=687cec37&hm=62bea03c62f76433719e7cacadfa574e77ab007daaaf33b18c38d596d4fce997&" alt="Image 3"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480932369793054/B5E4361B-AC11-4CEB-B4E2-4454E9C96DC2.jpg?ex=687e3db7&is=687cec37&hm=56ae86c095de6945d91e35734c2ab61c6b5982c3c259aa67633d957742ea7fc3&" alt="Image 4"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480933074567208/IMG_4009.jpg?ex=687e3db7&is=687cec37&hm=9d471c39ca73336d03c2b8ee3abcbf8827fd7053f268dc5b99417a9e6b1fa068&" alt="Image 5"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480934584258581/B7D5B603-B612-486E-819D-9EA72133B328.jpg?ex=687e3db8&is=687cec38&hm=52ca6902bf9e9a621cbc5187061677d1939a1fd5325d0741ad74204ee9789a18&" alt="Image 6"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480935028850700/40231D77-C634-40E7-8BA4-41B12F690348.jpg?ex=687e3db8&is=687cec38&hm=2a95faaee8808f6bac70f5556c5bf41670c709bf2d3c7ea91d4295f58283f7b3&" alt="Image 7"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396496565786378330/image.png?ex=687e4c46&is=687cfac6&hm=03df80c785188c56bd45ae2c8702ea63f5fd614c470dc862e04213b882982970&" alt="Image 8"  onclick="openLightbox(this.src)" /></div>
+</div>
+<br>
+<div class="gallery">
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480936865955910/IMG_4254.jpg?ex=687e3db8&is=687cec38&hm=5617a736a2de220438a10088fb2b476bc2a1ebaac33c7a320f2074d0426c4f80&" alt="Image 1"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396480930948059207/DSC02885.jpg?ex=687e3db7&is=687cec37&hm=f60202206880834041671fabb9275ea17a5ad86562de885946cc77ce0d8e09a8&" alt="Image 2"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396497239869882461/IMG_4555.png?ex=687e4ce7&is=687cfb67&hm=e7a23b930cadc060996b7dc234cd1455aef32255ec05c653754b178aec8501b7&" alt="Image 3"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396482614474440725/IMG_4554.png?ex=687e3f48&is=687cedc8&hm=7b9e07da08d313e338c5caf25009ab98a8be3760b771a5e317a2d5040ab9967e&" alt="Image 4"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396482614755463338/IMG_4736.jpg?ex=687e3f48&is=687cedc8&hm=f758bab4a31443d8db17b10d7b86abeb5c76c1708356ada4ece3431d7d6540fd&" alt="Image 5"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396482619826245742/IMG_4889.png?ex=687e3f49&is=687cedc9&hm=54eb5b3342068053484e2896e10e7001e8bbca7ca52079393621ef50a4b0caa0&" alt="Image 6"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396482620522762310/IMG_4973.jpg?ex=687e3f4a&is=687cedca&hm=fc7e62bd1a4dded5b1c3c4dc6663b4ce5d5bcf79a7104d5bfd981c4512c892dd&" alt="Image 7"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396482621025947740/5A7F1039-1851-43AA-B690-91955506B57C.jpg?ex=687e3f4a&is=687cedca&hm=d115bb12bf73b3152787db015b4c94a2173379c18d8f481b41d841aae08abdfb&" alt="Image 8"  onclick="openLightbox(this.src)" /></div>
+</div>
+<br>
+<div class="gallery">
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396482621583786044/IMG_5126.jpg?ex=687e3f4a&is=687cedca&hm=9c5600b8fe0499cad4e059062e42f93ab13337b632d401ec9294399303d6cf9d&" alt="Image 1"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396482622011478096/742D63BB-3166-4A63-919D-7396B49773C9.jpg?ex=687e3f4a&is=687cedca&hm=a66c5ae752d82b8cc2a1c3c939928152229f4648fb7518ef0ba1d98bb8d4f7a6&" alt="Image 2"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396498132082229400/IMG_5196.png?ex=687e4dbc&is=687cfc3c&hm=4b2941cd1efc7502e52fef518f26c4d6778556b9b6e39ecd193e781fe91b4c4b&" alt="Image 3"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396498570244259860/IMG_5268.png?ex=687e4e24&is=687cfca4&hm=7085a05815fbeb947ebfdec49be3b4bd39de79df04d4e1d0fdc1b9814e4b8789&" alt="Image 4"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396483600332882052/IMG_5346.jpg?ex=687e4033&is=687ceeb3&hm=99eb82abc0855c1869c8ff8c489d03a8aec0623253555f003b9d00fe8863c603&" alt="Image 5"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396483600937124001/IMG_5348.jpg?ex=687e4033&is=687ceeb3&hm=297d5ac133d590428af10d793402b86b52f3afd257c4d3120d289b1d9e4a6c62&" alt="Image 6"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396483601318809600/IMG_5425.png?ex=687e4033&is=687ceeb3&hm=476a9ae6080261106a6af5e35c1d9c1c929dd1b7cade575b09d458a3bfbaa331&" alt="Image 7"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396483601868259520/IMG_5446.jpg?ex=687e4034&is=687ceeb4&hm=cec196e3159e8cff586902e71d66a631f3a06f09a8f5c54880739d5afd3b0567&" alt="Image 8"  onclick="openLightbox(this.src)" /></div>
+</div>
+<br>
+<div class="gallery">
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396483602845532270/IMG_5550.jpg?ex=687e4034&is=687ceeb4&hm=f0183586ef257e0fc09ff95d9b040949f37344972e2208d40043bb5dd03db9c1&" alt="Image 1"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396483604162543828/994DBC20-06C4-4059-99F8-254761609C80.jpg?ex=687e4034&is=687ceeb4&hm=2204e13ca77e48a7ce0d2618f59ec750ddbbd74e2f3b085882749eaa73f6f7a4&" alt="Image 2"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396485318739492895/0ACC8D9B-D7F7-4DCE-9768-6ADE04B57272.jpg?ex=687e41cd&is=687cf04d&hm=2cc6beec78d5002684b559a74ca980ebc52f8535df1dd0c28aae72f77566008a&" alt="Image 3"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396485319335088158/IMG_5850.jpg?ex=687e41cd&is=687cf04d&hm=8eb5c88b1582b713fbfa7c107bae7592a90686278b799ed25a5eadb1c87ebb6e&" alt="Image 4"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396500370951245834/IMG_6034.png?ex=687e4fd2&is=687cfe52&hm=733e45c8dac2e4690c15ffbf5c72d443c250c72874cf898b64ba853d47c378ae&" alt="Image 5"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396500371513409588/IMG_6230.png?ex=687e4fd2&is=687cfe52&hm=99844161a525445062d716cb1b19d4d04754c8eef6cad8fbbad7ad313894ff55&" alt="Image 6"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396500371865600112/IMG_6227.png?ex=687e4fd2&is=687cfe52&hm=5ba47a7add522e89bb03e350a841dbf57125afa1b564fd2b76979c4af2ab566e&" alt="Image 7"  onclick="openLightbox(this.src)" /></div>
+  <div class="gallery-item"><img src="https://cdn.discordapp.com/attachments/884426321361518632/1396501146343968778/2556EBB1-8D4E-4F99-B9B4-068DD4464617.jpg?ex=687e508b&is=687cff0b&hm=757286939656798a25970e6cbd106dd801fa7428b28d5833e202f68e80e7ba5f&" alt="Image 8"  onclick="openLightbox(this.src)" /></div>
+</div>
+</body>
+<br>
+<head>
+<style>
+  .video-row {
+    display: flex;
+    gap: 80px; /* เว้นระยะห่างระหว่างคลิป */
+    flex-wrap: wrap; /* ให้ยืดหยุ่นถ้าจอแคบ */
+  }
+
+  iframe {
+    border-radius: 10px; /* เพิ่มความโค้งมุมถ้าต้องการ */
+  }
+</style>
+</head>
+<div style="display: flex; gap: 20px;">
+  <iframe src="https://drive.google.com/file/d/1X2f4oCvCX79EAQ4gWR0RYEqDdX_xSEpU/preview" width="500" height="280" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://drive.google.com/file/d/1SaaWR6T9y0sxUZzIXJAk9TkFY-FSSd6x/preview" width="500" height="280" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  // ฟังก์ชันเปิด lightbox โดยส่ง src ของภาพ
+  function openLightbox(src) {
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  // กดที่ background ปิด lightbox
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+</script>
+<body>
+  
+  <p style="text-align: center;">
+      <h2>Thank you for the wonderful experience</h2>
+      I never knew that being in love could bring me this much happiness. I gained so much just by being with you. That’s why it’s so hard for me to walk away. Everything we shared has always been a meaningful experience for me. Even though there’s sadness, I can honestly say I have no regrets. In fact, I still feel grateful and happy for everything we went through. I’ve always been inexperienced when it comes to love. Even though you’re the second person I’ve ever had feelings for, you’re the first one I truly tried for, the first person I genuinely hoped we’d succeed together. You’re the first person I can say I truly loved, and I’m not ashamed to say it out loud, that the one I loved was you. We spent our time creating happiness and smiles together. It was fun, and painful at times, all at once. But maybe if love didn’t feel like that, it wouldn’t be love at all. You made me a better person, and I’ll never forget to thank you when I finally reach my own success. You are such a lovely person
+    <br>
+    <strong>-Always with heart-</strong>
+    </p>
+    
+  
+</html>

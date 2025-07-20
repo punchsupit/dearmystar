@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi PuyPuy</title>
+</head>
+<body>
+     <meta charset="UTF-8">
+  <title>For PuyPuy</title>
+  <body>
+     <a href="index.html" style="color: black;">Go back to home page</a>
+    <p style="font-size: 18px; color: #444;">
+    <style>
+        .red-button {
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      padding: 20px 20px;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px #b03a2e;
+      transition: all 0.1s ease-in-out;
+      user-select: none;
+    }
+
+    .red-button:active {
+      transform: scale(0.9);
+      box-shadow: 0 2px #b03a2e;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #e74c3c;
+      min-height: 24px;
+      user-select: none;
+    }
+    body {
+      background-color: #fef6ff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 2px dashed #ffa7e5;
+      border-radius: 20px;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .message {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .sticker {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 80px;
+      transform: rotate(10deg);
+    }
+
+    h2 {
+      color: #ff66b2;
+      text-align: center;
+      margin-bottom: 15px;
+      .round-button {
+    background-color: #FF7F50; /* สีแกงแบบ Coral */
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 50%; /* ทำให้กลม */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+      }
+    }
+    
+    .red-button {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px #b03a2e;
+  transition: all 0.1s ease-in-out;
+  user-select: none;
+}
+
+.red-button:active {
+  transform: scale(0.9);
+  box-shadow: 0 2px #b03a2e;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #e74c3c;
+  min-height: 24px;
+  user-select: none;
+}
+ 
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    
+    <h2>Hey PuyPuy 🌸</h2> 
+    <img src="https://i.postimg.cc/x81BWWtf/y81qnb8g.png" width="80" height="450"alt="Your photo here" class="photo">
+     
+    
+    <p class="message">
+      I’m not really sure if you’re feeling better yet. Maybe you feel a bit better now, but it still sounds like you’re not fully okay. I just want you to know that I still care about you. And I think, deep down, you probably know that too. There are many people who care about you and want you to get better soon. I’m one of them. But I’m not just someone who says “get well soon” and walks away. I really mean it. I want to be here for you and take care of you in a real way.
+Spending hours learning how to write code isn’t something I usually do. And yeah, maybe I’ll get sick like you too. But if doing this helps you feel a little less alone, a little more cared for, then I’m okay with that. If I get to see you smile again, and hear your voice, the voice that made me fall for you in the first place, If I end up getting a little sick too, then it’s worth it to me.
+
+So please, rest well. Drink something warm. Take care of yourself. And just remember, I’m still here, Always here
+<p class="message">
+    I know you’re a talkative person, so your throat must hurt a lot. Honestly, seeing you sick like this really upsets me. I don’t like anything that causes you pain or makes you cry. I can’t forgive that, and I can’t forgive myself either for not taking good care of you.
+Anyway, I just hope your voice comes back to normal soon. I don’t know if you’ve debated yet, and I’m worried that your throat might hurt. So don’t forget to take your medicine and follow what your parents or doctors say. And don’t trust Dr. Punch, haha,  that person’s really unreliable. You probably know they talk a lot but don’t actually follow through, even they can’t trust themselves.
+But the one thing Dr. Punch is sure about is that you’ll be bright and cheerful again very soon.
+<p style="text-align: center;">
+    <strong>-Always appreciate you, with all my heart-</strong>
+    </p>
+  </div>
+    <img src="https://i.postimg.cc/5y9MfHNM/download-30-removebg-preview.png" width="80" height="100" alt="sticker">
+    
+
+<div id="message"></div>
+
+<button class="red-button" id="myButton">Press me</button>
+  <div id="message"></div>
+
+
+<script>
+   const button = document.getElementById('myButton');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', () => {
+      const texts = ["Yeah, that’s right, let me take your sickness!", "Good job! Keep it up and you’ll recover quickly!", "Please let me be sick instead of you.", "I’m sure you’ll get through this just fine", "Go go go gooo!"];
+      const randomText = texts[Math.floor(Math.random() * texts.length)];
+      message.textContent = randomText;
+
+      clearTimeout(button._timeoutId);
+      button._timeoutId = setTimeout(() => {
+        message.textContent = '';
+      }, 1500);
+    });
+</script>
+</body>
+</html>
